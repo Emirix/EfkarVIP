@@ -1,0 +1,580 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Staatliches&display=swap");
+p {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+* {
+  color: white;
+}
+
+iframe {
+  width: 650px;
+  height: 280px;
+  margin: 0 auto;
+  display: block;
+}
+
+.App {
+  width: 800px;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header h1 {
+  color: #e67e22;
+  text-align: center;
+  font-family: "Staatliches", cursive;
+  font-size: 5em;
+  margin-bottom: 2px;
+  padding: 0;
+}
+
+.header p {
+  text-align: center;
+  padding: 0;
+  position: relative;
+  top: -20px;
+  color: #f1903b;
+  font-weight: 300;
+}
+
+.baba {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s;
+  display: flex;
+  user-select: none;
+}
+.baba img {
+  width: 200px;
+  opacity: 0.9;
+  user-select: none;
+  transition: 0.2s;
+  position: relative;
+}
+.baba img:hover + .soz {
+  display: block;
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.baba img:hover {
+  opacity: 1;
+  transform: scale(1.02);
+  top: -2px;
+}
+.baba img:active {
+  transform: scale(1);
+  bottom: 0;
+}
+.baba .soz {
+  align-self: center;
+  background-color: #555;
+  padding: 10px;
+  width: 270px;
+  border-radius: 2px;
+  position: relative;
+  border-top-left-radius: 0;
+  opacity: 1;
+  transition: 0.2s;
+  display: none;
+}
+.baba .soz::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #555;
+  left: -19px;
+  top: 0;
+}
+.baba .soz h3 {
+  font-weight: 600;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+  color: #e67e22;
+}
+
+.ferdi_BABA2 {
+  position: absolute;
+  right: 0;
+  width: 150px;
+  display: none;
+  user-select: none;
+}
+
+button.red {
+  border-color: red;
+  color: red;
+}
+
+button {
+  border: 1px solid #e67e22;
+  background: transparent;
+  color: #e67e22;
+  padding: 2px 10px;
+  outline: none !important;
+  margin: 2px;
+}
+button:hover {
+  background-color: #333;
+}
+button:active {
+  color: white;
+  border-color: white;
+}
+
+.button_con {
+  width: 650px;
+  margin: 0 auto;
+  margin-top: 10px;
+  position: sticky;
+  top: 0;
+  background-color: #111;
+}
+
+.button_con .borderx {
+  width: 100px;
+  height: 2px;
+  background: #e67e22;
+  transition: 0.2s;
+  border-radius: 9in;
+  border: none;
+}
+.button_con ul {
+  display: flex;
+  padding: 0;
+  margin: 0 auto;
+}
+.button_con li {
+  list-style: none;
+  color: #aaa;
+  padding: 10px 13px;
+  border: 2px solid transparent;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.1s;
+  display: flex;
+  align-items: center;
+}
+.button_con li svg {
+  margin-right: 5px;
+  width: 16px;
+  fill: #aaa;
+}
+.button_con li:hover {
+  color: white;
+}
+.button_con li:hover svg {
+  fill: white;
+}
+.button_con li.active {
+  color: #e67e22;
+}
+.button_con li.active svg {
+  fill: #e67e22;
+}
+
+.refreshButton {
+  fill: #e67e22;
+  width: 60px;
+}
+
+.ana_sayfa {
+  display: flex;
+  width: 650px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.ana_sayfa .item {
+  margin-top: 20px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 30px;
+  transition: 0.2s;
+}
+.ana_sayfa .item p {
+  color: #e67e22;
+  user-select: none;
+}
+.ana_sayfa .item:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.ana_sayfa .item:active {
+  transform: scale(0.95);
+}
+
+.dertDinliyici {
+  width: 650px;
+  margin: 0 auto;
+  margin-top: 20px !important;
+}
+.dertDinliyici h3 {
+  font-weight: 600;
+  color: #e67e22;
+  font-size: 1.3em;
+  margin: 0;
+  padding: 0;
+}
+.dertDinliyici p {
+  color: #ccc;
+}
+
+.dertler {
+  display: flex;
+}
+.dertler .derbeder {
+  border-bottom: 1px solid #d2d2d2;
+  padding: 10px;
+  border-bottom-style: dashed;
+  width: 700px;
+  margin-bottom: 5px;
+}
+.dertler .derbeder .gonderen {
+  color: #e67e22;
+}
+
+.popup-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  border-radius: 1;
+  transition: 0.2s;
+}
+.popup-container .popup {
+  width: 400px;
+  height: 400px;
+  background-color: #222;
+  box-sizing: border-box;
+}
+.popup-container .popup h3 {
+  color: #e67e22;
+  font-weight: 600;
+}
+.popup-container .popup small {
+  color: #aaa;
+}
+.popup-container .popup input,
+.popup-container .popup textarea {
+  background-color: #111;
+  border: 1px solid #d3d3d3;
+  outline: none;
+  padding: 7px 20px;
+  width: 100%;
+  border-radius: 2px;
+  transition: 0.2s;
+}
+.popup-container .popup input:focus,
+.popup-container .popup textarea:focus {
+  border-color: #e67e22;
+}
+
+input,
+textarea {
+  background-color: #111;
+  border: 1px solid #d3d3d3;
+  outline: none;
+  padding: 7px 20px;
+  width: 100%;
+  border-radius: 2px;
+}
+input:focus,
+textarea:focus {
+  border-color: #e67e22;
+}
+
+.sarkiEkle {
+  width: 650px;
+  margin: 0 auto;
+}
+
+.dertDinliyici .sticky {
+  background-color: #111;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  padding-bottom: 5px;
+  width: 700px;
+}
+
+.close-icon {
+  width: 25px;
+  height: 25px;
+  background-color: rgba(255, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9in;
+}
+.close-icon:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+  cursor: pointer;
+}
+.close-icon:hover svg {
+  fill: white;
+}
+.close-icon svg {
+  width: 15px;
+  transition: 0.1s;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.center-y {
+  align-items: center;
+}
+
+.flex.center-x {
+  justify-content: center;
+}
+
+.dert_listesi {
+  width: 700px;
+}
+
+.admin-con {
+  width: 600px;
+  margin: 0 auto;
+}
+.admin-con .con-2 {
+  width: 500px;
+}
+.admin-con h1 {
+  color: #e67e22;
+}
+.admin-con ul li {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  list-style: none;
+}
+.admin-con ul li:nth-child(odd) {
+  background-color: #222;
+}
+.admin-con ul li:nth-child(even) {
+  background-color: #333;
+}
+.admin-con ul li button {
+  display: block;
+}
+.admin-con ul li button.red {
+  margin-left: auto;
+}
+
+.login-admin h3 {
+  color: #e67e22;
+  text-align: center;
+}
+
+.loading-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: renk 1s;
+  transition: 2s;
+}
+.loading-container .img {
+  background: url("./Resim/ferdi.png");
+  width: 500px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: opacity 0.5s;
+  z-index: 600;
+  position: relative;
+}
+.loading-container .retro {
+  background: url("./Resim/retro.png");
+  position: fixed;
+  z-index: 200;
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.6;
+  animation: turn 5s linear;
+  left: 330px;
+  border-radius: 9in;
+}
+
+@keyframes renk {
+  from {
+    background-color: #222;
+  }
+  to {
+    background-color: #000;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0.7;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes turn {
+  to {
+    opacity: 1;
+    transform: rotateX(1deg);
+  }
+}
+.loading-aciklama {
+  width: 400px;
+  background-color: black;
+  position: relative;
+  z-index: 500;
+}
+.loading-aciklama h3 {
+  color: #e67e22;
+  margin-bottom: 0;
+}
+.loading-aciklama .load {
+  width: 0%;
+  height: 10px;
+  margin-top: 20px;
+  background-color: #e67e22;
+  animation: load 5s cubic-bezier(0.14, 0.82, 0.86, 0.64);
+}
+
+@keyframes load {
+  to {
+    width: 100%;
+  }
+}
+@keyframes kapat {
+  100% {
+    display: none;
+  }
+}
+/* RESPONSIVE */
+@media screen and (max-width: 480px) {
+  iframe {
+    width: 90%;
+    height: 40%;
+  }
+
+  .App {
+    width: 100%;
+  }
+  .App h1 {
+    font-size: 3.5rem;
+  }
+
+  .button_con {
+    width: 100%;
+  }
+  .button_con ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ana_sayfa {
+    width: 100%;
+  }
+
+  .baba img {
+    width: 120px;
+    height: 150px;
+  }
+
+  .baba h3 {
+    font-size: 16px;
+  }
+
+  .baba .soz {
+    width: 200px;
+    font-size: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  }
+
+  .header p {
+    display: none;
+  }
+
+  .dertDinliyici {
+    width: 100%;
+  }
+  .dertDinliyici .sticky {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+  }
+  .dertDinliyici .dert_listesi {
+    width: 100%;
+  }
+  .dertDinliyici .dert_listesi .derbeder {
+    width: 100%;
+  }
+  .dertDinliyici .dert_listesi h3 {
+    text-align: center;
+  }
+
+  .borderx {
+    display: none;
+  }
+
+  .sarkiEkle {
+    width: 100%;
+  }
+
+  .Hakkımızda {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .retro {
+    left: 42px !important;
+    top: 50px !important;
+  }
+
+  .loading-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .loading-container .loading-aciklama {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.popup ul li {
+  margin-left: 15px;
+  list-style: none;
+  color: #adadad;
+}
+.popup ul li:before {
+  content: "> ";
+}
+.popup ul li.h {
+  margin-left: 0;
+  color: #e67e22;
+}
+
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,641 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Staatliches&display=swap");
+$primary: #e67e22;
+
+p {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+* {
+  color: white;
+}
+
+iframe {
+  width: 650px;
+  height: 280px;
+  margin: 0 auto;
+  display: block;
+}
+
+.App {
+  width: 800px;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header h1 {
+  color: $primary;
+  text-align: center;
+  font-family: "Staatliches", cursive;
+  font-size: 5em;
+  margin-bottom: 2px;
+  padding: 0;
+}
+
+.header p {
+  text-align: center;
+  padding: 0;
+  position: relative;
+  top: -20px;
+  color: #f1903b;
+  font-weight: 300;
+}
+
+.baba {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s;
+  display: flex;
+  user-select: none;
+
+  img {
+    width: 200px;
+    opacity: 0.9;
+    user-select: none;
+    transition: 0.2s;
+    position: relative;
+    &:hover + .soz {
+      display: block;
+      cursor: pointer;
+      transform: scale(1.02);
+    }
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.02);
+      top: -2px;
+    }
+
+    &:active {
+      transform: scale((1));
+      bottom: 0;
+    }
+  }
+
+  .soz {
+    align-self: center;
+    background-color: #555;
+    padding: 10px;
+    width: 270px;
+    border-radius: 2px;
+    position: relative;
+    border-top-left-radius: 0;
+    opacity: 1;
+    transition: 0.2s;
+    display: none;
+    &::before {
+      content: "";
+      position: absolute;
+
+      width: 0;
+      height: 0;
+      border-top: 0px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-right: 20px solid #555;
+      left: -19px;
+      top: 0;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 1.2em;
+      margin: 0;
+      padding: 0;
+      color: $primary;
+    }
+  }
+}
+
+.ferdi_BABA2 {
+  position: absolute;
+  right: 0;
+  width: 150px;
+  display: none;
+  user-select: none;
+}
+
+button.red {
+  border-color: red;
+  color: red;
+}
+button {
+  border: 1px solid $primary;
+  background: transparent;
+  color: $primary;
+  padding: 2px 10px;
+  outline: none !important;
+  margin: 2px;
+
+  &:hover {
+    background-color: #333;
+  }
+
+  &:active {
+    color: white;
+    border-color: white;
+  }
+}
+
+.button_con {
+  width: 650px;
+  margin: 0 auto;
+  margin-top: 10px;
+  position: sticky;
+  top: 0;
+  background-color: #111;
+}
+
+.button_con {
+  .borderx {
+    width: 100px;
+    height: 2px;
+    background: $primary;
+    transition: 0.2s;
+    border-radius: 9in;
+    border: none;
+  }
+  ul {
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
+  }
+  li {
+    list-style: none;
+    color: #aaa;
+    padding: 10px 13px;
+    border: 2px solid transparent;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.1s;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 5px;
+      width: 16px;
+      fill: #aaa;
+    }
+
+    &:hover {
+      color: white;
+    }
+
+    &:hover svg {
+      fill: white;
+    }
+  }
+
+  li.active {
+    color: $primary;
+    //border-bottom: 2px solid $primary;
+  }
+
+  li.active svg {
+    fill: $primary;
+  }
+}
+.refreshButton {
+  fill: $primary;
+  width: 60px;
+}
+
+.ana_sayfa {
+  display: flex;
+  width: 650px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.ana_sayfa .item {
+  margin-top: 20px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 30px;
+  transition: 0.2s;
+  p {
+    color: $primary;
+    user-select: none;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.dertDinliyici {
+  width: 650px;
+  margin: 0 auto;
+  margin-top: 20px !important;
+  //position: relative;
+  //z-index: 50 ;
+
+  h3 {
+    font-weight: 600;
+    color: $primary;
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    color: #ccc;
+  }
+}
+
+.dertler {
+  display: flex;
+
+  .derbeder {
+    border-bottom: 1px solid #d2d2d2;
+    padding: 10px;
+    border-bottom-style: dashed;
+    width: 700px;
+    margin-bottom: 5px;
+    .gonderen {
+      color: $primary;
+    }
+  }
+}
+
+.popup-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(#000, 0.7);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  border-radius: 1;
+  transition: 0.2s;
+
+  .popup {
+    width: 400px;
+    height: 400px;
+    background-color: #222;
+    box-sizing: border-box;
+
+    h3 {
+      color: $primary;
+      font-weight: 600;
+    }
+    small {
+      color: #aaa;
+    }
+    input,
+    textarea {
+      background-color: #111;
+      border: 1px solid #d3d3d3;
+      outline: none;
+      padding: 7px 20px;
+      width: 100%;
+      border-radius: 2px;
+      transition: 0.2s;
+
+      &:focus {
+        border-color: $primary;
+      }
+    }
+  }
+}
+
+input,
+textarea {
+  background-color: #111;
+  border: 1px solid #d3d3d3;
+  outline: none;
+  padding: 7px 20px;
+  width: 100%;
+  border-radius: 2px;
+
+  &:focus {
+    border-color: $primary;
+  }
+}
+
+.sarkiEkle {
+  width: 650px;
+  margin: 0 auto;
+}
+
+.dertDinliyici .sticky {
+  background-color: #111;
+  border-bottom: 1px solid rgba($color: #000, $alpha: 0.4);
+  padding-bottom: 5px;
+  width: 700px;
+}
+
+.close-icon {
+  width: 25px;
+  height: 25px;
+  background-color: rgba(#f00, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9in;
+
+  &:hover {
+    background-color: rgba($color: #f00, $alpha: 0.7);
+    cursor: pointer;
+
+    svg {
+      fill: white;
+    }
+  }
+  svg {
+    width: 15px;
+    transition: 0.1s;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.center-y {
+  align-items: center;
+}
+
+.flex.center-x {
+  justify-content: center;
+}
+
+.dert_listesi {
+  width: 700px;
+}
+
+.admin-con {
+  width: 600px;
+  margin: 0 auto;
+
+  .con-2 {
+    width: 500px;
+  }
+
+  h1 {
+    color: $primary;
+  }
+
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      list-style: none;
+      &:nth-child(odd) {
+        background-color: #222;
+      }
+
+      &:nth-child(even) {
+        background-color: #333;
+      }
+
+      button {
+        display: block;
+      }
+
+      button.red {
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.login-admin {
+  h3 {
+    color: $primary;
+    text-align: center;
+  }
+}
+
+.loading-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: renk 1s;
+  transition: 2s;
+  
+  .img {
+    background: url("./Resim/ferdi.png");
+    width: 500px;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: opacity 0.5s;
+    z-index: 600;
+    position: relative;
+  }
+
+  .retro {
+    background: url("./Resim/retro.png");
+    position: fixed;
+    z-index: 200;
+    width: 300px;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    animation: turn 5s linear;
+   left: 330px;
+    border-radius: 9in;
+  }
+}
+
+@keyframes renk {
+  from {
+    background-color: #222;
+  }
+  to {
+    background-color: #000;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0.7;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes turn {
+
+  to {
+    opacity: 1;
+    transform: rotateX(1deg)
+  }
+}
+
+.loading-aciklama{
+  width: 400px;
+  background-color: black;
+  position: relative;
+  z-index: 500;
+  h3{
+    color: $primary;
+    margin-bottom: 0;
+
+  }
+.load{
+  width: 0%;
+  height: 10px;
+  margin-top: 20px;
+  background-color: $primary;
+  animation: load 5s cubic-bezier(.14,.82,.86,.64);
+}
+}
+
+@keyframes load{
+  to{
+    width: 100%;
+  }
+}
+
+@keyframes kapat{
+  99%{
+
+  }
+  100%{
+    display: none;
+  }
+}
+
+
+/* RESPONSIVE */ 
+
+
+@media screen and (max-width: 480px) {
+  iframe{
+    width: 90%;
+    height: 40%;
+  }
+  .App{
+    width: 100%;
+
+    h1{
+      font-size: 3.5rem;
+    }
+  }
+
+  .button_con{
+    width: 100%;
+    
+    ul{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .ana_sayfa{
+    width: 100%;
+  }
+
+  .baba img{
+    width: 120px;
+    height: 150px;
+    
+  }
+  .baba h3{
+    font-size: 16px ;
+  }
+
+  .baba .soz{
+  width: 200px;
+  font-size: 15px;
+  box-shadow: 2px 2px 10px rgba($color: #000, $alpha: 0.8);
+  }
+
+  .header{
+    p{
+      display: none;
+    }
+  }
+
+  .dertDinliyici{
+    width: 100%;
+    .sticky{
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .dert_listesi{
+      width: 100%;
+      .derbeder{
+        width: 100%;
+      }
+      h3{
+        text-align: center;
+      }
+    }
+  }
+
+  .borderx{
+    display: none;
+  }
+
+  .sarkiEkle{
+    width: 100%;
+  }
+
+  .Hakkımızda{
+    width: 90%;
+    margin: 0 auto;
+  } 
+
+  .retro{
+    left: 42px !important;
+    top: 50px !important;
+  }
+
+  .loading-container{
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .loading-aciklama{
+      width: 95%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+  
+  }
+}
+
+.popup ul{
+  li{
+    margin-left: 15px;
+    list-style: none;
+    color: #adadad;
+
+    &:before{
+      content: "> ";
+    }
+  }
+
+  li.h{
+    margin-left: 0;
+    color: $primary;
+  }
+}
